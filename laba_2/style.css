@@ -1,0 +1,48 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #dfcdbb;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  a {
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+    font-weight: 600;
+  }
+}
+
+img {
+  border-radius: 10px;
+}
+
+#first-film {
+  font-family: "Montserrat", sans-serif;
+  p {
+    text-align: start;
+  }
+}
+
+#second-film {
+  font-family: "Open Sans", sans-serif;
+  p {
+    text-align: center;
+  }
+}
+
+#third-film {
+  font-family: "Roboto", sans-serif;
+  p {
+    text-align: right;
+  }
+
+  td {
+    font-weight: 600;
+  }
+}
