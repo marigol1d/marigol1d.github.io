@@ -1,0 +1,156 @@
+@keyframes shake {
+    0%,
+    to {
+        transform: translateZ(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-2px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(2px);
+    }
+}
+@keyframes bounce {
+    0% {
+        bottom: 100%;
+        transform: scaleY(1);
+    }
+    60% {
+        bottom: 0;
+        transform: scaleY(0.5);
+    }
+    70% {
+        bottom: 50%;
+        transform: scaleY(1);
+    }
+    80% {
+        bottom: 0;
+        transform: scaleY(0.55);
+    }
+    85% {
+        bottom: 25%;
+        transform: scaleY(1);
+    }
+    90% {
+        bottom: 0;
+        transform: scaleY(0.6);
+    }
+    92% {
+        bottom: 12.5%;
+        transform: scaleY(1);
+    }
+    94% {
+        bottom: 0;
+        transform: scaleY(0.65);
+    }
+    95% {
+        bottom: 6.25%;
+        transform: scaleY(1);
+    }
+    96% {
+        bottom: 0;
+        transform: scaleY(0.7);
+    }
+    97% {
+        bottom: 3.125%;
+        transform: scaleY(1);
+    }
+    98% {
+        bottom: 0;
+        transform: scaleY(0.75);
+    }
+    98.5% {
+        bottom: 1.5625%;
+        transform: scaleY(1);
+    }
+    99% {
+        bottom: 0;
+        transform: scaleY(0.8);
+    }
+    99.5% {
+        bottom: 0.78125%;
+        transform: scaleY(1);
+    }
+    100% {
+        bottom: 0;
+        transform: scaleY(1);
+    }
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+button {
+    margin: 50px;
+    font-size: 20px;
+    background-color: red;
+    animation: shake 1s infinite;
+    transition: 0.2s all;
+}
+
+button:hover {
+    animation: none;
+    background-color: rgb(52, 206, 142);
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(52, 206, 142);
+    transition: width 0.3s ease;
+}
+
+a:hover {
+    color: rgb(52, 206, 142);
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.red-ball {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    animation: bounce 2.5s cubic-bezier(0.67, 0.18, 0.99, 0.25) forwards;
+}
