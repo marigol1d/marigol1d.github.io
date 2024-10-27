@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Laba3</title>
+    </head>
+    <body>
+        <h1>Регистрация</h1>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Персональная информация</legend>
+                <label for="nickname">Имя</label>
+                <input id="nickname" name="nickname" type="text" />
+                <label for="email">Почта</label>
+                <input id="email" name="email" type="email" />
+                <label for="password">Пароль</label>
+                <input id="password" name="password" type="password" />
+            </fieldset>
+            
+            <fieldset>
+                <input>
+                <legend>Личные данные</legend>
+                <label for="photo">Фото</label>
+                <input id="photo" name="photo" type="file" />
+                <label for="tel">Телефон</label>
+                <input id="tel" name="tel" type="tel" />
+
+                <label for="checkbox">Есть 18 лет?</label>
+                <input id="checkbox" name="isAdult" type="checkbox">Да</input>
+
+                <fieldset>
+                    <legend>Пол</legend>
+                    <input
+                        type="radio"
+                        id="man"
+                        name="sex"
+                        value="Мужской"
+                        checked
+                    />
+                    <label for="man">Мужской</label>
+                    <input type="radio" id="women" name="sex" value="Женский" />
+                    <label for="women">Женский</label>
+                </fieldset>
+            </input>
+            </fieldset>
+
+            <input type="submit" />
+            <input type="reset" />
+        </form>
+    </body>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        fieldset {
+            padding: 10px 20px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin: 0 auto;
+        }
+
+        form {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+
+        label[for="women"],
+        label[for="man"] {
+            display: inline;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            margin-top: 10px;
+        }
+    </style>
+</html>
